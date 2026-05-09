@@ -155,9 +155,9 @@ if AWS_STORAGE_BUCKET_NAME:
         'default': {
             'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
         },
-        'staticfiles': {
-            'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
-        },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
     }
 
 CORS_ALLOWED_ORIGINS = [
